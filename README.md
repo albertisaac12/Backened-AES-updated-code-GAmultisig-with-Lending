@@ -24,11 +24,56 @@ To deploy the `SimpleGAMultiSig` smart contract on the æternity blockchain plat
    git clone [https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending]
    ```
 
-2. Deploy the contract using the æternity blockchain SDK or web IDE.
+2. Deploy the contract using the æternity blockchain SDK or web IDE. 
    
-3. Customize the contract parameters, such as the number of required confirmations, fee protection settings, and initial signers, according to your requirements.
+4. Customize the contract parameters, such as the number of required confirmations, fee protection settings, and initial signers, according to your requirements.
 
-4. Integrate the contract into your decentralized applications (dApps) or use it as a standalone solution for multi-party transactions.
+5. Integrate the contract into your decentralized applications (dApps) or use it as a standalone solution for multi-party transactions.
+
+
+## Contract Setup
+
+To keep things simple we will be using the web contract compiler
+
+1. head over to the [https://contracts.aepps.com/] and paste the code.
+
+2. Before we Compile and deploy our contracts we would need two things.
+    - Superhero Wallet [https://chromewebstore.google.com/detail/superhero/mnhmmkepfddpifjkamaligfeemcbhdne]
+    - Test AE cryptocurrency
+3. Let's walk through by setting up the Superhero Wallet, it's relatively easy and simple just download the extension from the above link and setup at least 5 accounts. Follow the images below to setup the wallet. (Make sure to look at the red boxes)
+
+<div align="center">
+   <img src = "https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/f343ee44-b2c4-4533-915d-5b38378d886f">
+               
+</div>
+
+<div align="center">
+   <img src ="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/f6822792-3b90-4f5c-94df-d10ce06d061e">
+</div>
+
+<div align="center">
+   <img src ="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/84091457-6c4d-4f47-9fa5-5b2085cdc715">
+</div>
+
+4. Now, let us claim some Test AE click on this link [https://faucet.aepps.com/]. now copy your wallet address and paste it in the website and hit on "Top Up". Could check your wallet, there will be 5 AE deposited.
+
+<div align="center">
+   <img src="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/37cc3019-d0de-4beb-83ac-8f958585cd7d">
+</div>
+
+<div align="center">
+   <img src="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/f21b2b1b-0dd7-427c-b88a-fb0e2410ce2a">
+</div>
+
+5. Now that we have got Test AE into our Wallet lets head over to the IDE [https://contracts.aepps.com/] , now paste the code from "contracts.aes" file from the repository into IDE, connect the wallet and it will ask you to deploy. (Note While connecting to Wallet a sign request will pop up )
+   <div align="centre">
+      <img src="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/05cf7409-87a8-40e1-b664-de0788cb03ec">
+   </div> 
+
+   <div align ="centre">
+      <img src="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/d0cc1079-e74a-4a1d-b42b-ad19ee1e57a5">
+   </div>
+
 
 ## Contributions
 
