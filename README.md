@@ -70,9 +70,32 @@ To keep things simple we will be using the web contract compiler
       <img src="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/05cf7409-87a8-40e1-b664-de0788cb03ec">
    </div> 
 
-   <div align ="centre">
+   <div align ="center">
       <img src="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/d0cc1079-e74a-4a1d-b42b-ad19ee1e57a5">
    </div>
+6. We are finally Done with the Setup , let us now walk through the important functions and how to call them.
+
+## Contract Initialization
+
+1. Time to call the init() {this is similar to a constructor} function.  [ stateful entrypoint init(confirmations_required : int, a1 : address, a2 : address, a3 : address, a4 : address) ]
+   - It requires a "int" value and 4 addresses seperated by commas.
+     <div align="center">
+        <img src="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/cb640cc0-4920-461b-ae66-1ba7d4a4b470">
+     </div>
+2. Deploy the smart contract and sign the transsaction
+   <div align="center">
+        <img src="https://github.com/albertisaac12/Backened-AES-updated-code-GAmultisig-with-Lending/assets/91803132/02a9b4a7-b9de-4cba-a973-570ce6000810">
+     </div>
+
+3. Now Let's Walk through few important functions
+   - stateful entrypoint authorize(nonce : int) : bool // this function is used to authorize the proposed txn request . It takes an int value.
+   - stateful entrypoint propose(tx_hash : hash, ttl : Chain.ttl) // propose a new tx valid for the given ttl.
+   - stateful entrypoint confirm(tx_hash : hash)   // signer confirms the current tx . It takes in a txn hash.
+   - stateful entrypoint refuse(tx_hash: hash) // refuse the current tx. It takes in a txn hash. It takes in a txn hash.
+   - stateful entrypoint revoke(tx_hash : hash) // revoke the current tx and clean state. It takes in a txn hash.
+   - stateful entrypoint lend(amount : int, borrower : address) // This function can only called by Lenders(signers) i.e the addresses passed into the init() , it takes in a "int" and "address". 
+   - stateful entrypoint borrow(amount : int) // This function can be called by any address other than the signers i.e the addresses passed into the init() , it takes in a "int".
+   - stateful entrypoint repay(amount : int) // This function can be called to repay the taken loan , it takes an int argumrnt (Note: make sure to pass 1% more fee than what you have borrowed)
 
 
 ## Contributions
